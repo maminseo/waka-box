@@ -4,5 +4,8 @@ branding:
   icon: "clipboard"
   color: "blue"
 runs:
-  using: 'node20'
-  main: 'main.js'
+  using: "composite"
+  steps: 
+    - run: 
+$GITHUB_ACTION_PATH/script.sh
+      shell: bash
