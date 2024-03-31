@@ -4,8 +4,5 @@ branding:
   icon: "clipboard"
   color: "blue"
 runs:
-  using: "composite"
-  steps: 
-    - run: 
-$GITHUB_ACTION_PATH/script.sh
-      shell: bash
+  using: "node16"
+  main: "dist/index.js"
